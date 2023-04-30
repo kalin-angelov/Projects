@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "question": "What is the name of this animal ?",
+        "img": "https://www.daskalo.com/jivotnitesvqt/files/2017/11/Platypus.jpg",
+        "answerOne": "Platypus",
+        "answerTwo": "Cat",
+        "answerThree": "Dog",
+        "answerFour": "Shark"
+    }
+]
