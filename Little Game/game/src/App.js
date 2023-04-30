@@ -1,9 +1,9 @@
-import { Test } from './components/Test/Test';
+import { Quiz } from './components/Quiz/Quiz';
 
 function App() {
   return (
     <div >
-      <Test />
+      <Quiz />
     </div>
   );
 }
