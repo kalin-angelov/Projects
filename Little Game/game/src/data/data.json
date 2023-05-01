@@ -4,8 +4,38 @@
         "question": "What is the name of this animal ?",
         "img": "https://www.daskalo.com/jivotnitesvqt/files/2017/11/Platypus.jpg",
         "answerOne": "Platypus",
+        "one": true,
         "answerTwo": "Cat",
+        "two": false,
         "answerThree": "Dog",
-        "answerFour": "Shark"
+        "three": false,
+        "answerFour": "Shark",
+        "four": false
+    },
+    {
+        "id": 2,
+        "question": "To which country does this flag belong to ?",
+        "img": "https://i.ebayimg.com/images/g/lEoAAOSwA3Jig0Ay/s-l500.png",
+        "answerOne": "USA",
+        "one": false,
+        "answerTwo": "Japan",
+        "two": false,
+        "answerThree": "Portugal",
+        "three": true,
+        "answerFour": "China",
+        "four": false
+    },
+    {
+        "id": 3,
+        "question": "How many continents are in the world ?",
+        "img": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2017/04/thumb_720_450_Continentsdreamstime_xl_19095238.jpg",
+        "answerOne": "5",
+        "one": false,
+        "answerTwo": "9",
+        "two": false,
+        "answerThree": "1",
+        "three": false,
+        "answerFour": "7",
+        "four": true
     }
 ]
