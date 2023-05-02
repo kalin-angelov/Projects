@@ -1,46 +1,49 @@
 .quiz{
-    margin-top: 30px;
+    padding-top: 5px;
     text-align: center;
 }
 
 .headlineAndPoints p{
-    position: fixed;
+    position: absolute;
+    top: 0;
     right: 30px;
-    top: -5px;
-    text-align: center;
     width: 280px;
     background: rgb(255, 187, 0);
     border-radius: 30px;
 }
 
 .headlineAndPoints h1{
+    color: aliceblue;
     font-weight: 100;
     font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .quiz p{
+    color: rgb(0, 0, 0);
+    background: rgb(255, 187, 0);
+    border-radius: 30px;
     font-size: 50px;
     font-family:'Courier New', Courier, monospace;
 }
 
 .quiz img{
     height: 500px;
-    width: 670px;
+    width: 710px;
     border-radius: 30px;
     box-sizing: border-box;
-    box-shadow: 7px 7px 10px #010101, -7px -7px 10px rgb(0, 0, 0);
+    box-shadow: 7px 7px 10px #000000, -7px -7px 10px rgb(175, 174, 174);
 }
 
 .answers{
-    margin: 1em auto;
+    margin: 3em auto;
     padding: 3em;
     width: 850px;
     height: 190px;
     border-radius: 100px;
     border-color: #000000;
-    background: #00b7ff;
-    box-shadow: 0 2px 2px 3px #000000;
+    background: #40809a;
+    box-shadow: 7px 7px 10px #000000, -7px -7px 10px rgb(202, 202, 202);
 }
 
 .answers button{
@@ -48,11 +51,13 @@
     padding: 35px 40px;
     width: 50%;
     float: left;
+    box-shadow: 7px 7px 10px #000000;
     border: 1px solid black;
-    background-color: aliceblue;
-    border-radius: 35%;
+    background-color: rgb(255, 221, 0);
+    border-radius: 15%;
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
 }
 
 .answers button:hover{
