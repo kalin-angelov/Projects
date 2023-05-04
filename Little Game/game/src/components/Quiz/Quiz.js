@@ -1,6 +1,7 @@
 import styles from '../Quiz/Quiz.module.css';
 
 import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import data from '../../data/data.json';
 import { Card } from '../Card/Card';
@@ -8,6 +9,9 @@ import { CardTrue } from '../CardTrue/CardTrue';
 import { CardFalse } from '../CardFalse/CardFalse';
 
 export const Quiz = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const [showCard, setShowCard] = useState(false);
     const [isTrueCard, setIsTrueCard] = useState(false);
     const [isFalseCard, setIsFalseCard] = useState(false);
@@ -55,6 +59,11 @@ export const Quiz = () => {
         }, 4000);
     };
 
+    const onCLickBack = (event) => {
+        event.preventDefault();
+        navigate('/');
+    };
+
     return (
         <>
             {showCard && <Card />}
@@ -64,6 +73,7 @@ export const Quiz = () => {
             <div className={styles.quiz}>
                 <div className={styles.headlineAndPoints}>
                     <h1>Funny Quiz</h1>
+                    <h2>Welcome: {location.state.username}</h2>
                     <p>{points}/{data.length}0</p>
                     {showPlusPoint && <p>+10</p>}
                 </div>
@@ -94,6 +104,7 @@ export const Quiz = () => {
                         <button onClick={onClickIsFalse}>{data[questionCounter].answerFour}</button>
                     }
                 </div>
+                <button onClick={onCLickBack}>Home</button>
             </div>
         </>
     );
