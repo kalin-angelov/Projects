@@ -18,10 +18,34 @@ export const Home = () => {
         };
     };
 
+    const onClickESC = (event) => {
+        if (event.keyCode === 27) {
+            setUsername('');
+        }
+    };
+
+    const onFocusIn = (event) => {
+        event.target.placeholder = "";
+    };
+
+    const onFocusOut = (event) => {
+        event.target.placeholder = "Enter you'r name here....";
+    };
+
     return(
         <div className={styles.home}>
             <form className={styles.form}>
-                <input type="text" placeholder="Enter you'r name here...." name='username' onChange={onUsernameChange} value={username}/>
+                <input 
+                    type="text" 
+                    placeholder="Enter you'r name here...." 
+                    name='username' 
+                    autoComplete='off'
+                    onChange={onUsernameChange} 
+                    value={username}
+                    onKeyDown={onClickESC}
+                    onFocus={onFocusIn}
+                    onBlur={onFocusOut}
+                />
 
                 <article >
                     <button className={styles.send} onClick={onClickStart}>Lets get started</button>
