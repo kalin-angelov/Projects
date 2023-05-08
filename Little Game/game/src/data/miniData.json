@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "question": "What is the name of this animal ?",
+        "img": "https://www.daskalo.com/jivotnitesvqt/files/2017/11/Platypus.jpg",
+        "answerOne": "Platypus",
+        "one": true,
+        "answerTwo": "Cat",
+        "two": false,
+        "answerThree": "Dog",
+        "three": false,
+        "answerFour": "Shark",
+        "four": false
+    },
+    {
+        "id": 2,
+        "question": "To which country does this flag belong to ?",
+        "img": "https://i.ebayimg.com/images/g/lEoAAOSwA3Jig0Ay/s-l500.png",
+        "answerOne": "USA",
+        "one": false,
+        "answerTwo": "Japan",
+        "two": false,
+        "answerThree": "Portugal",
+        "three": true,
+        "answerFour": "China",
+        "four": false
+    },
+    {
+        "id": 3,
+        "question": "How many continents are in the world ?",
+        "img": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2017/04/thumb_720_450_Continentsdreamstime_xl_19095238.jpg",
+        "answerOne": "5",
+        "one": false,
+        "answerTwo": "9",
+        "two": false,
+        "answerThree": "1",
+        "three": false,
+        "answerFour": "7",
+        "four": true
+    },
+    {
+        "id": 4,
+        "question": "What is a group of lions called ?",
+        "img": "https://i.ytimg.com/vi/4dzj5rEFAdk/maxresdefault.jpg",
+        "answerOne": "Party",
+        "one": false,
+        "answerTwo": "Pack",
+        "two": false,
+        "answerThree": "Pride",
+        "three": true,
+        "answerFour": "Band",
+        "four": false
+    },
+    {
+        "id": 5,
+        "question": "Congratulations you have answer all questions!",
+        "img": "https://www.kindpng.com/picc/m/352-3522440_clip-art-great-job-team-images-transparent-good.png",
+        "answerOne": "Result's"
+    }
+]
