@@ -64,13 +64,45 @@
     box-shadow: 7px 7px 10px #000000;
     border: 1px solid black;
     background-color: rgb(255, 221, 0);
-    border-radius: 15%;
+    border-radius: 20px;
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
 }
 
 .answers button:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+    background-color: rgb(255, 145, 0);
+}
+
+.result{
+    margin: 3em auto;
+    padding: 3em;
+    width: 850px;
+    height: 190px;
+    border-radius: 100px;
+    border-color: #000000;
+    background: #40809a;
+    box-shadow: 7px 7px 10px #000000, -7px -7px 10px rgb(202, 202, 202);
+}
+
+.result button{
+    margin-top: 50px;
+    padding: 35px 40px;
+    width: 70%;
+    box-shadow: 7px 7px 10px #000000;
+    border: 1px solid black;
+    background-color: rgb(255, 221, 0);
+    border-radius: 20px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.result button:hover{
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
