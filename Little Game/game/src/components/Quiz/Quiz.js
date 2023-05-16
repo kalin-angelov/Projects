@@ -18,6 +18,8 @@ export const Quiz = () => {
     const [questionCounter, setQuestionCounter] = useState(0);
     const [points, setPoints] = useState(0);
     const [showPlusPoint, setShowPlusPoint] = useState(false);
+    const [givenAnswer, setGivenAnswer] = useState({});
+    const [results, setResults] = useState([]);
 
     const questionAndPointControl = (questions) => {
         if (questions.length - 1 === questionCounter) {
@@ -27,7 +29,8 @@ export const Quiz = () => {
         }
     };
 
-    const onClickIsTrue = () => {
+    const onClickIsTrue = (event) => {
+        const answer = event.target.name;
         setShowCard(true);
 
         setTimeout(() => {
@@ -44,7 +47,9 @@ export const Quiz = () => {
         }, 4000);
     };
 
-    const onClickIsFalse = () => {
+    const onClickIsFalse = (event) => {
+        const answer = event.target.name;
+
         setShowCard(true);
 
         setTimeout(() => {
@@ -65,8 +70,8 @@ export const Quiz = () => {
 
     const onClickResult = (event) => {
         event.preventDefault();
-        navigate('/result', {state: { username: location.state.username, points }});
-    }
+        navigate('/result', { state: { username: location.state.username, points, results } });
+    };
 
     return (
         <>
@@ -86,32 +91,50 @@ export const Quiz = () => {
                 {data.length - 1 !== questionCounter ?
                     <div className={styles.answers}>
                         {data[questionCounter].one === true ?
-                            <button onClick={onClickIsTrue}>{data[questionCounter].answerOne}</button>
+                            <button onClick={onClickIsTrue} name={data[questionCounter].answerOne}>
+                                {data[questionCounter].answerOne}
+                            </button>
                             :
-                            <button onClick={onClickIsFalse}>{data[questionCounter].answerOne}</button>
+                            <button onClick={onClickIsFalse} name={data[questionCounter].answerOne}>
+                                {data[questionCounter].answerOne}
+                            </button>
                         }
 
                         {data[questionCounter].two === true ?
-                            <button onClick={onClickIsTrue}>{data[questionCounter].answerTwo}</button>
+                            <button onClick={onClickIsTrue} name={data[questionCounter].answerTwo}>
+                                {data[questionCounter].answerTwo}
+                            </button>
                             :
-                            <button onClick={onClickIsFalse}>{data[questionCounter].answerTwo}</button>
+                            <button onClick={onClickIsFalse} name={data[questionCounter].answerTwo}>
+                                {data[questionCounter].answerTwo}
+                            </button>
                         }
 
                         {data[questionCounter].three === true ?
-                            <button onClick={onClickIsTrue}>{data[questionCounter].answerThree}</button>
+                            <button onClick={onClickIsTrue} name={data[questionCounter].answerThree}>
+                                {data[questionCounter].answerThree}
+                            </button>
                             :
-                            <button onClick={onClickIsFalse}>{data[questionCounter].answerThree}</button>
+                            <button onClick={onClickIsFalse} name={data[questionCounter].answerThree}>
+                                {data[questionCounter].answerThree}
+                            </button>
                         }
 
                         {data[questionCounter].four === true ?
-                            <button onClick={onClickIsTrue}>{data[questionCounter].answerFour}</button>
+                            <button onClick={onClickIsTrue} name={data[questionCounter].answerFour}>
+                                {data[questionCounter].answerFour}
+                            </button>
                             :
-                            <button onClick={onClickIsFalse}>{data[questionCounter].answerFour}</button>
+                            <button onClick={onClickIsFalse} name={data[questionCounter].answerFour}>
+                                {data[questionCounter].answerFour}
+                            </button>
                         }
                     </div>
                     :
                     <div className={styles.result}>
-                        <button onClick={onClickResult}>{data[questionCounter].answerOne}</button>
+                        <button onClick={onClickResult}>
+                            {data[questionCounter].answerOne}
+                        </button>
                     </div>
                 }
                 <button onClick={onCLickBack}>Home</button>
