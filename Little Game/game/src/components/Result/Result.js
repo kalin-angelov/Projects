@@ -8,7 +8,7 @@ export const Result = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const userResult = location.state;
-    console.log(userResult);
+    console.log(userResult.results);
 
     const onPlayAgain = () => {
         navigate('/');
@@ -22,6 +22,9 @@ export const Result = () => {
                 <p>{location.state.points}/{data.length - 1}0</p>
             </div>
             <p>Result's</p>
+            <section>
+
+            </section>
             <button onClick={onPlayAgain}>Play Again</button>
         </div>
     )
