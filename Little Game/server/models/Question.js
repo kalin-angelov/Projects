@@ -21,7 +21,7 @@ const questionSchema = new mongoose.Schema({
         require: [true]
     },
     one: {
-        type: String,
+        type: Boolean,
         require: [true],
         enum: [true, false]
     },
@@ -30,7 +30,7 @@ const questionSchema = new mongoose.Schema({
         require: [true]
     },
     two: {
-        type: String,
+        type: Boolean,
         require: [true],
         enum: [true, false]
     },
@@ -39,7 +39,7 @@ const questionSchema = new mongoose.Schema({
         require: [true]
     },
     three: {
-        type: String,
+        type: Boolean,
         require: [true],
         enum: [true, false]
     },
@@ -48,7 +48,7 @@ const questionSchema = new mongoose.Schema({
         require: [true]
     },
     four: {
-        type: String,
+        type: Boolean,
         require: [true],
         enum: [true, false]
     }
