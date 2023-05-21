@@ -1,20 +1,33 @@
 import styles from './Home.module.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import { getAllQuestions } from '../service/questionsService';
 
 export const Home = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
+    const [questions, setQuestions] = useState();
+
+    useEffect(() => {
+        getAllQuestions()
+            .then(questions => setQuestions(questions))
+            .catch(error => console.log(error))
+    },[]);
 
     const onUsernameChange = (event) => {
         setUsername(event.target.value);
     };
 
-    const onClickStart = (event) => {
+    const onClickStart = async (event) => {
         event.preventDefault();
+
         if (username !== '') {
-            navigate('/quiz', {state: {username: username}});
+            navigate('/quiz', {state: {
+                username: username, 
+                questions: questions
+            }});
         };
     };
 
@@ -46,10 +59,9 @@ export const Home = () => {
                     onFocus={onFocusIn}
                     onBlur={onFocusOut}
                 />
-
-                <article >
+                <section >
                     <button className={styles.send} onClick={onClickStart}>Lets get started</button>
-                </article>
+                </section>
             </form>
         </div>
     );
