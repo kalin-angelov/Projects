@@ -28,10 +28,12 @@
     cursor: pointer;
     background-color: rgb(255, 187, 0);
     box-shadow: 0 9px #bbbbbb;
+    transition: background-color 300ms linear;
 }
 
 .send:hover{
     background-color: rgb(255, 145, 0);
+    color: black;
 }
 
 .send:active {
