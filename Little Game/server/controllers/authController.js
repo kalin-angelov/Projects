@@ -5,13 +5,16 @@ exports.postUser = async (req, res) => {
 
     const existingUsername = await usernameChecker(username);
 
-    if (existingUsername) {
-        return {error: "Username Already Exists !"};
-    };
-
     try {
-        await createUser(username);
+        if (existingUsername) {
+            throw ("Username Already Exists !");
+        };
+
+        const user = await createUser(username);
+
+        res.json(user);
+
     } catch(error) {
-        console.log(error.message);
+        res.status(400).send({ error: error })
     };
 };
