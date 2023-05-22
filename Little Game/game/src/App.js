@@ -4,6 +4,7 @@ import { Home } from "./components/Home/Home";
 import { Quiz } from "./components/Quiz/Quiz";
 import { Result } from "./components/Result/Result";
 import { Footer } from "./components/Footer/Footer";
+import { Page404 } from "./components/404/404"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/result" element={<Result />} />
+        <Route path="/404" element={<Page404 />} />
       </Routes>
 
       <Footer />
