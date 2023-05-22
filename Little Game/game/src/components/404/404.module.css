@@ -1,0 +1,36 @@
+.page404 {
+    padding-top: 15%;
+    padding-bottom: 30%;
+    text-align: center;
+    color: white;
+}
+
+.page404 h1 {
+    font-size: 60px;
+}
+
+.page404 p {
+    font-size: 50px;
+}
+
+.page404 button {
+    width: 20%;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(255, 187, 0);
+    box-shadow: 0 9px #bbbbbb;
+    transition: background-color 300ms linear;
+}
+
+.page404 button:hover{
+    background-color: rgb(255, 145, 0);
+    color: black;
+}
+
+.page404 button:active {
+    background-color: rgb(255, 145, 0);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
