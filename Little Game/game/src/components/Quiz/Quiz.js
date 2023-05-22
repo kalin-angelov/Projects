@@ -15,6 +15,7 @@ export const Quiz = () => {
 
     const username = location.state.username;
     const questions = location.state.questions;
+    const user = location.state.user;
 
     const [showCard, setShowCard] = useState(false);
     const [isTrueCard, setIsTrueCard] = useState(false);
@@ -85,7 +86,6 @@ export const Quiz = () => {
 
             <div className={styles.quiz}>
                 <div className={styles.headlineAndPoints}>
-                    <h1>Funny Quiz</h1>
                     <h2>Welcome: {username}</h2>
                     <p>{points}/{questions.length - 1}0</p>
                     {showPlusPoint && <p>+10</p>}
