@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
         maxLength: [8, "Username cant be more than 8 characters !"]
     },
     answers: {
-        type: []
+        type: String,
+        score: ''
     }
 });
 
