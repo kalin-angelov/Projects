@@ -2,13 +2,18 @@ import styles from "./Result.module.css";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
-import data from '../../data/miniData.json';
+import { QuestionsInfo } from "../QuestionsInfo/QuestionsInfo";
 
 export const Result = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const userResult = location.state;
-    console.log(userResult.results);
+
+    const user = location.state.user;
+    const points = location.state.points;
+    const givenAnswers = location.state.givenAnswers;
+    const questions = location.state.questions;
+
+    console.log(...questions);
 
     const onPlayAgain = () => {
         navigate('/');
@@ -17,15 +22,14 @@ export const Result = () => {
     return (
         <div className={styles.result}>
             <div className={styles.headlineAndPoints}>
-                <h1>Funny Quiz</h1>
-                <h2>Welcome: {location.state.username}</h2>
-                <p>{location.state.points}/{data.length - 1}0</p>
+                <h2>Welcome: {user.username}</h2>
+                <p>{points}/{questions.length - 1}0</p>
             </div>
-            <p>Result's</p>
+            <p>Given Answer</p>
             <section>
-
+                {questions.map(question => <QuestionsInfo question={question} givenAnswers={givenAnswers} />)}
             </section>
-            <button onClick={onPlayAgain}>Play Again</button>
+            <button className={styles.playAgain} onClick={onPlayAgain}>Play Again</button>
         </div>
     )
 };
