@@ -40,7 +40,6 @@ export const Home = () => {
             const user = await addNewUser(username);
 
             navigate('/quiz', {state: {
-                username: username, 
                 questions: questions,
                 user: user
             }});
