@@ -13,7 +13,6 @@ export const Quiz = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const username = location.state.username;
     const questions = location.state.questions;
     const user = location.state.user;
 
@@ -23,12 +22,20 @@ export const Quiz = () => {
     const [questionCounter, setQuestionCounter] = useState(0);
     const [points, setPoints] = useState(0);
     const [showPlusPoint, setShowPlusPoint] = useState(false);
-    const [givenAnswer, setGivenAnswer] = useState({});
-    const [results, setResults] = useState([]);
+    const [givenAnswers, setGivenAnswers] = useState([]);
 
     const questionAndPointControl = (questions) => {
         if (questions.length - 1 === questionCounter) {
             setQuestionCounter(questions.length - 1);
+            navigate('/result', {
+                state:
+                {
+                    user,
+                    points,
+                    givenAnswers,
+                    questions
+                }
+            });
         } else {
             setQuestionCounter(questionCounter => ++questionCounter);
         }
@@ -43,6 +50,7 @@ export const Quiz = () => {
             setIsTrueCard(true);
             setShowPlusPoint(true);
             setPoints(points => points + 10);
+            setGivenAnswers(givenAnswers => [...givenAnswers, answer]);
         }, 2000);
 
         setTimeout(() => {
@@ -54,7 +62,6 @@ export const Quiz = () => {
 
     const onClickIsFalse = (event) => {
         const answer = event.target.name;
-
         setShowCard(true);
 
         setTimeout(() => {
@@ -65,17 +72,13 @@ export const Quiz = () => {
         setTimeout(() => {
             setIsFalseCard(false);
             questionAndPointControl(questions);
+            setGivenAnswers(givenAnswers => [...givenAnswers, answer]);
         }, 4000);
     };
 
     const onCLickBack = (event) => {
         event.preventDefault();
         navigate('/');
-    };
-
-    const onClickResult = (event) => {
-        event.preventDefault();
-        navigate('/result', { state: { username: location.state.username, points, results } });
     };
 
     return (
@@ -86,61 +89,53 @@ export const Quiz = () => {
 
             <div className={styles.quiz}>
                 <div className={styles.headlineAndPoints}>
-                    <h2>Welcome: {username}</h2>
-                    <p>{points}/{questions.length - 1}0</p>
+                    <h2>Welcome: {user.username}</h2>
+                    <p>{points}/{questions.length}0</p>
                     {showPlusPoint && <p>+10</p>}
                 </div>
                 <p>{questions[questionCounter].question}</p>
                 <img src={questions[questionCounter].img} alt="someImg" />
-                {questions.length - 1 !== questionCounter ?
-                    <div className={styles.answers}>
-                        {questions[questionCounter].one === true ?
-                            <button onClick={onClickIsTrue} name={questions[questionCounter].answerOne}>
-                                {questions[questionCounter].answerOne}
-                            </button>
-                            :
-                            <button onClick={onClickIsFalse} name={questions[questionCounter].answerOne}>
-                                {questions[questionCounter].answerOne}
-                            </button>
-                        }
-
-                        {questions[questionCounter].two === true ?
-                            <button onClick={onClickIsTrue} name={questions[questionCounter].answerTwo}>
-                                {questions[questionCounter].answerTwo}
-                            </button>
-                            :
-                            <button onClick={onClickIsFalse} name={questions[questionCounter].answerTwo}>
-                                {questions[questionCounter].answerTwo}
-                            </button>
-                        }
-
-                        {questions[questionCounter].three === true ?
-                            <button onClick={onClickIsTrue} name={questions[questionCounter].answerThree}>
-                                {questions[questionCounter].answerThree}
-                            </button>
-                            :
-                            <button onClick={onClickIsFalse} name={questions[questionCounter].answerThree}>
-                                {questions[questionCounter].answerThree}
-                            </button>
-                        }
-
-                        {questions[questionCounter].four === true ?
-                            <button onClick={onClickIsTrue} name={questions[questionCounter].answerFour}>
-                                {questions[questionCounter].answerFour}
-                            </button>
-                            :
-                            <button onClick={onClickIsFalse} name={questions[questionCounter].answerFour}>
-                                {questions[questionCounter].answerFour}
-                            </button>
-                        }
-                    </div>
-                    :
-                    <div className={styles.result}>
-                        <button onClick={onClickResult}>
+                <div className={styles.answers}>
+                    {questions[questionCounter].one === true ?
+                        <button onClick={onClickIsTrue} name={questions[questionCounter].answerOne}>
                             {questions[questionCounter].answerOne}
                         </button>
-                    </div>
-                }
+                        :
+                        <button onClick={onClickIsFalse} name={questions[questionCounter].answerOne}>
+                            {questions[questionCounter].answerOne}
+                        </button>
+                    }
+
+                    {questions[questionCounter].two === true ?
+                        <button onClick={onClickIsTrue} name={questions[questionCounter].answerTwo}>
+                            {questions[questionCounter].answerTwo}
+                        </button>
+                        :
+                        <button onClick={onClickIsFalse} name={questions[questionCounter].answerTwo}>
+                            {questions[questionCounter].answerTwo}
+                        </button>
+                    }
+
+                    {questions[questionCounter].three === true ?
+                        <button onClick={onClickIsTrue} name={questions[questionCounter].answerThree}>
+                            {questions[questionCounter].answerThree}
+                        </button>
+                        :
+                        <button onClick={onClickIsFalse} name={questions[questionCounter].answerThree}>
+                            {questions[questionCounter].answerThree}
+                        </button>
+                    }
+
+                    {questions[questionCounter].four === true ?
+                        <button onClick={onClickIsTrue} name={questions[questionCounter].answerFour}>
+                            {questions[questionCounter].answerFour}
+                        </button>
+                        :
+                        <button onClick={onClickIsFalse} name={questions[questionCounter].answerFour}>
+                            {questions[questionCounter].answerFour}
+                        </button>
+                    }
+                </div>
                 <button onClick={onCLickBack}>Home</button>
             </div>
         </>
