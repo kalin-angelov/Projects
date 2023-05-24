@@ -30,10 +30,12 @@
 
 .quiz > p {
     padding: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
     color: rgb(0, 0, 0);
     background: rgb(255, 187, 0);
     border-radius: 30px;
-    font-size: 60px;
+    font-size: 52px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -61,7 +63,7 @@
     border: 1px solid black;
     background: rgb(255, 187, 0);
     border-radius: 20px;
-    font-size: 40px;
+    font-size: 38px;
     font-style: italic;
     cursor: pointer;
 }
