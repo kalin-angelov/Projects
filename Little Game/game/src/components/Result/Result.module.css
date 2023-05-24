@@ -4,11 +4,16 @@
 }
 
 .result p{
+    
     color: rgb(0, 0, 0);
     background: rgb(255, 187, 0);
     border-radius: 30px;
     font-size: 50px;
     font-family:'Courier New', Courier, monospace;
+}
+
+.headlineAndPoints {
+    padding: 60px;
 }
 
 .headlineAndPoints p{
@@ -20,13 +25,6 @@
     border-radius: 30px;
 }
 
-.headlineAndPoints h1{
-    color: aliceblue;
-    font-weight: 100;
-    font-size: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .headlineAndPoints h2{
     position: absolute;
     top: 10px;
@@ -35,4 +33,27 @@
     font-weight: 100;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.playAgain {
+    margin-top: 30px;
+    width: 12%;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgb(255, 187, 0);
+    box-shadow: 0 9px #bbbbbb;
+    transition: background-color 300ms linear;
+}
+
+.playAgain:hover{
+    background-color: rgb(255, 145, 0);
+    color: black;
+}
+
+.playAgain:active {
+    background-color: rgb(255, 145, 0);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
