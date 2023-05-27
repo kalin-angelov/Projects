@@ -81,10 +81,6 @@
     padding: 3em;
     width: 850px;
     height: 190px;
-    border-radius: 100px;
-    border-color: #000000;
-    background: #40809a;
-    box-shadow: 7px 7px 10px #000000, -7px -7px 10px rgb(202, 202, 202);
 }
 
 .result button {
@@ -93,7 +89,7 @@
     width: 70%;
     box-shadow: 7px 7px 10px #000000;
     border: 1px solid black;
-    background-color: rgb(255, 221, 0);
+    background-color: rgb(255, 187, 0);
     border-radius: 20px;
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
