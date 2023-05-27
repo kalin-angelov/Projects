@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "question": "What is the name of this animal ?",
         "img": "https://www.daskalo.com/jivotnitesvqt/files/2017/11/Platypus.jpg",
         "answerOne": "Platypus",
@@ -10,10 +9,10 @@
         "answerThree": "Dog",
         "three": false,
         "answerFour": "Shark",
-        "four": false
+        "four": false ,
+        "correctAnswer": "Platypus"
     },
     {
-        "id": 2,
         "question": "To which country does this flag belong to ?",
         "img": "https://i.ebayimg.com/images/g/lEoAAOSwA3Jig0Ay/s-l500.png",
         "answerOne": "USA",
@@ -23,10 +22,10 @@
         "answerThree": "Portugal",
         "three": true,
         "answerFour": "China",
-        "four": false
+        "four": false,
+        "correctAnswer": "Portugal"
     },
     {
-        "id": 3,
         "question": "How many continents are in the world ?",
         "img": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2017/04/thumb_720_450_Continentsdreamstime_xl_19095238.jpg",
         "answerOne": "5",
@@ -36,10 +35,10 @@
         "answerThree": "1",
         "three": false,
         "answerFour": "7",
-        "four": true
+        "four": true,
+        "correctAnswer": "7"
     },
     {
-        "id": 4,
         "question": "What is a group of lions called ?",
         "img": "https://i.ytimg.com/vi/4dzj5rEFAdk/maxresdefault.jpg",
         "answerOne": "Party",
@@ -49,11 +48,24 @@
         "answerThree": "Pride",
         "three": true,
         "answerFour": "Band",
-        "four": false
+        "four": false,
+        "correctAnswer": "Pride"
     },
     {
-        "id": 5,
-        "question": "Congratulations you have answer all questions!",
+        "question": "Did you have fun playing ?",
+        "img": "https://thumbs.dreamstime.com/b/funny-animal-meme-image-photogenic-meerkat-smiling-camera-narcissistic-friendly-face-cute-vain-posing-flirting-172568468.jpg",
+        "answerOne": "Yes",
+        "one": true,
+        "answerTwo": "No",
+        "two": true,
+        "answerThree": "It was stupid",
+        "three": true,
+        "answerFour": "...i have seen better",
+        "four": true,
+        "correctAnswer": "All"
+    },
+    {
+        "question": "Congratulations you have answered all questions!",
         "img": "https://www.kindpng.com/picc/m/352-3522440_clip-art-great-job-team-images-transparent-good.png",
         "answerOne": "Result's"
     }
