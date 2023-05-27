@@ -13,8 +13,6 @@ export const Result = () => {
     const givenAnswers = location.state.givenAnswers;
     const questions = location.state.questions;
 
-    console.log(...questions);
-
     const onPlayAgain = () => {
         navigate('/');
     }
@@ -27,7 +25,7 @@ export const Result = () => {
             </div>
             <p>Given Answer</p>
             <section>
-                {questions.map(question => <QuestionsInfo question={question} givenAnswers={givenAnswers} />)}
+                {givenAnswers.map(questionAndAnswer => <QuestionsInfo key={questions._id} questionAndAnswer={questionAndAnswer} />)}
             </section>
             <button className={styles.playAgain} onClick={onPlayAgain}>Play Again</button>
         </div>
