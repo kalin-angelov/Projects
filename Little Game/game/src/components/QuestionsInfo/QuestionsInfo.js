@@ -4,7 +4,6 @@ export const QuestionsInfo = ({
     questionAndAnswer
 }) => {
     
-    console.log(questionAndAnswer);
     const correctOrNot = (answer) => {
         if (questionAndAnswer.givenAnswer === answer && questionAndAnswer.correctAnswer === "All") {
             return { background: "green" };
@@ -42,6 +41,7 @@ export const QuestionsInfo = ({
                     style={correctOrNot(questionAndAnswer.answerD)}
                 >{questionAndAnswer.answerD}</button>
             </div>
+            {/* <button><i class="fa-solid fa-circle-info"></i></button> */}
         </div>
     )
 };
