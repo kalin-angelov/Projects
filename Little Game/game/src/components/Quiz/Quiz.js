@@ -6,6 +6,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Card } from '../Card/Card';
 import { CardTrue } from '../CardTrue/CardTrue';
 import { CardFalse } from '../CardFalse/CardFalse';
+import { removeUser } from '../../service/userService';
 
 
 export const Quiz = () => {
@@ -101,9 +102,17 @@ export const Quiz = () => {
         }, 4000);
     };
 
-    const onCLickBack = (event) => {
+    const onCLickQuit = async (event) => {
         event.preventDefault();
-        navigate('/');
+
+        try {
+            await removeUser(user._id);
+            
+            navigate('/');
+        } catch(error) {
+            console.log(error);
+        }
+        
     };
 
     return (
@@ -113,11 +122,15 @@ export const Quiz = () => {
             {isFalseCard && <CardFalse />}
 
             <div className={styles.quiz}>
+            {questions.length - 1 !== questionCounter ?
                 <div className={styles.headlineAndPoints}>
                     <h2>Welcome: {user.username}</h2>
                     <p>{points}/{questions.length - 1}0</p>
                     {showPlusPoint && <p>+10</p>}
                 </div>
+                :
+                null
+            }
                 <p>{questions[questionCounter].question}</p>
                 <img src={questions[questionCounter].img} alt="someImg" />
                 {questions.length - 1 !== questionCounter ?
@@ -169,7 +182,7 @@ export const Quiz = () => {
                         </button>
                     </div>
                 }
-                <button onClick={onCLickBack}>Home</button>
+                <button className={styles.quit} onClick={onCLickQuit}>Quit</button>
             </div>
         </>
     );
