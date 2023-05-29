@@ -17,6 +17,7 @@
 }
 
 .questionsInfo p {
+    padding: 10px;
     margin-left: 20%;
     margin-right: 20%;
     color: rgb(0, 0, 0);
