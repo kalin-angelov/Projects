@@ -1,4 +1,4 @@
-const { usernameChecker, createUser } = require('../manager/authManager');
+const { usernameChecker, createUser, deleteUser } = require('../manager/authManager');
 
 exports.postUser = async (req, res) => {
     const { username } = req.body;
@@ -18,3 +18,15 @@ exports.postUser = async (req, res) => {
         res.status(400).send({ error: error })
     };
 };
+
+exports.deleteUser = async (req, res) => {
+    const id = req.params.id;
+    
+    try {
+        const deletedUser = await deleteUser(id);
+
+        res.json(deletedUser);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
