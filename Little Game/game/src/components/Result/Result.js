@@ -18,11 +18,8 @@ export const Result = () => {
     }
 
     return (
-        <div className={styles.result}>
-            <div className={styles.headlineAndPoints}>
-                <h2>Welcome: {user.username}</h2>
-                <p>{points}/{questions.length - 1}0</p>
-            </div>
+        <div className={styles.result}> 
+            <h2><i class="fa-solid fa-asterisk"></i> Name: {user.username} - Points: {points}/{questions.length - 1}0 <i class="fa-solid fa-asterisk"></i></h2>
             <p>Given Answer</p>
             <section>
                 {givenAnswers.map(questionAndAnswer => <QuestionsInfo key={questions._id} questionAndAnswer={questionAndAnswer} />)}
