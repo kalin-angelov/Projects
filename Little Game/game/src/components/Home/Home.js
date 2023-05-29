@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { getAllQuestions } from '../../service/questionsService';
-import { addNewUser } from '../../service/createUser';
+import { addNewUser } from '../../service/userService';
 
 export const Home = () => {
     const navigate = useNavigate();
