@@ -2,6 +2,8 @@ const User = require('../models/User');
 
 exports.usernameChecker = (username) => User.findOne({ username });
 
+exports.deleteUser = (id) =>  User.findOneAndDelete(id);
+
 exports.createUser = async (username) => {
 
     try {
@@ -14,3 +16,4 @@ exports.createUser = async (username) => {
         throw (filterError);
     }
 };
+
