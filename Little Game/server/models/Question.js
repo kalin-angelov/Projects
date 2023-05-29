@@ -51,6 +51,10 @@ const questionSchema = new mongoose.Schema({
         type: Boolean,
         require: [true],
         enum: [true, false]
+    },
+    correctAnswer: {
+        type: String,
+        require: [true]
     }
 });
 
