@@ -11,7 +11,7 @@
 }
 
 .cardFront{
-    margin-top: 273px;
+    margin-top: 205px;
     width: 100%;
     position: absolute;
     left: 0;
@@ -22,8 +22,8 @@
 }
 
 .cardImg {
-    width: 550px;
-    height: 850px;
+    width: 350px;
+    height: 550px;
 }
 
 @keyframes rotate {
