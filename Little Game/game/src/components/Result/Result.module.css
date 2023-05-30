@@ -1,20 +1,22 @@
 @import url("https://use.fontawesome.com/releases/v6.4.0/css/all.css");
 
 .result{
+    background-color: #000000;
     padding-top: 5px;
     text-align: center;
+}
+
+.result section {
+    margin: 10px;
+    padding-top: 10px;
 }
 
 .result p{
     color: rgb(0, 0, 0);
     background: rgb(255, 187, 0);
     border-radius: 30px;
-    font-size: 50px;
-    font-family:'Courier New', Courier, monospace;
-}
-
-.headlineAndPoints {
-    padding: 60px;
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
 }
 
 .result i{
@@ -24,25 +26,25 @@
 }
 
 .result h2{
-    padding: 30px;
+    padding: 20px;
     box-shadow: 7px 7px 10px #000000, 0px -7px 80px rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.814);
     border: 3px solid rgb(255, 187, 0);
     border-radius: 30%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 30%;
+    margin-right: 30%;
     color: rgb(255, 187, 0);
     font-weight: 100;
-    font-size: 50px;
+    font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .playAgain {
     margin-top: 30px;
     width: 12%;
-    height: 50px;
+    height: 40px;
     border-radius: 50px;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     background-color: rgb(255, 187, 0);
     box-shadow: 0 9px #bbbbbb;
