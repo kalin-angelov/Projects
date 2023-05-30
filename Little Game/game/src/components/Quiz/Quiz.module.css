@@ -4,17 +4,17 @@
 }
 
 .headlineAndPoints {
-    padding: 50px;
+    padding: 30px;
 }
 
 .headlineAndPoints p {
     position: absolute;
     top: 0;
     right: 30px;
-    width: 280px;
+    width: 190px;
     background: rgb(255, 187, 0);
     border-radius: 30px;
-    font-size: 60px;
+    font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -24,46 +24,45 @@
     left: 30px;
     color: aliceblue;
     font-weight: 100;
-    font-size: 50px;
+    font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .quiz > p {
-    padding: 25px;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding: 5px;
+    margin-left: 15%;
+    margin-right: 15%;
     color: rgb(0, 0, 0);
     background: rgb(255, 187, 0);
     border-radius: 30px;
-    font-size: 52px;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .quiz img {
-    height: 500px;
-    width: 710px;
+    height: 420px;
+    width: 50%;
     border-radius: 30px;
     box-sizing: border-box;
     box-shadow: 7px 7px 10px #000000, -7px -7px 10px rgb(175, 174, 174);
 }
 
 .answers {
-    margin: 3em auto;
-    padding: 3em;
-    width: 850px;
+    margin: 30px auto;
+    width: 700px;
     height: 190px;
 }
 
 .answers button {
     display: block;
-    padding: 35px 40px;
+    padding: 20px;
     width: 50%;
     float: left;
     box-shadow: 7px 7px 10px #000000;
     border: 1px solid black;
     background: rgb(255, 187, 0);
     border-radius: 20px;
-    font-size: 38px;
+    font-size: 22px;
     font-style: italic;
     cursor: pointer;
 }
@@ -105,11 +104,11 @@
 }
 
 .quit {
-    margin-top: 50px;
-    width: 8%;
-    height: 30px;
+    margin-bottom: 20px;
+    width: 10%;
+    height: 40px;
     border-radius: 50px;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     background-color: rgb(255, 187, 0);
     box-shadow: 0 9px #bbbbbb;
