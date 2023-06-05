@@ -1,5 +1,7 @@
 import styles from "./Result.module.css";
 
+import { removeUser } from "../../service/userService"
+
 import { useLocation, useNavigate } from "react-router-dom";
 
 import { QuestionsInfo } from "../QuestionsInfo/QuestionsInfo";
@@ -13,8 +15,14 @@ export const Result = () => {
     const givenAnswers = location.state.givenAnswers;
     const questions = location.state.questions;
 
-    const onPlayAgain = () => {
-        navigate('/');
+    const onPlayAgain = async () => {
+        try {
+            await removeUser(user._id);
+
+            navigate('/');
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
