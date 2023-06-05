@@ -1,9 +1,12 @@
+/* Quiz Page */
 .quiz {
     padding-top: 5px;
     text-align: center;
 }
 
+/* Headline and Points */
 .headlineAndPoints {
+    grid-area: head;
     padding: 30px;
 }
 
@@ -28,7 +31,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.quiz > p {
+/* Question */
+.question p {
     padding: 5px;
     margin-left: 15%;
     margin-right: 15%;
@@ -39,14 +43,15 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.quiz img {
-    height: 420px;
-    width: 50%;
+.question img {
+    width: 50vh;
+    height: 40vh;
     border-radius: 30px;
     box-sizing: border-box;
     box-shadow: 7px 7px 10px #000000, -7px -7px 10px rgb(175, 174, 174);
 }
 
+/* Answers Buttons */
 .answers {
     margin: 30px auto;
     width: 700px;
@@ -75,6 +80,7 @@
     background-color: rgb(255, 145, 0);
 }
 
+/* Result Button */
 .result {
     margin: 3em auto;
     padding: 65px;
@@ -103,7 +109,9 @@
     background-color: rgb(255, 145, 0);
 }
 
+/* Quit Button */
 .quit {
+    grid-area: quit;
     margin-bottom: 20px;
     width: 10%;
     height: 40px;
