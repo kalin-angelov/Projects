@@ -1,5 +1,6 @@
 @import url("https://use.fontawesome.com/releases/v6.4.0/css/all.css");
 
+/* Result Page */
 .result{
     background-color: #000000;
     padding-top: 5px;
@@ -7,8 +8,9 @@
 }
 
 .result section {
-    margin: 10px;
-    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
 }
 
 .result p{
@@ -39,6 +41,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Play Again Button */
 .playAgain {
     margin-top: 30px;
     width: 12%;
